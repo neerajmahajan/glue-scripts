@@ -98,7 +98,7 @@ field_level_ruleset = """
     ColumnValues "date" matches "^[0-9]{8}$",
     ColumnValues "time" matches "^[0-9]{6}$",    
     ColumnValues "code" matches "^[0-9]{13,19}$",    
-    (ColumnValues "c_r" = "") or (ColumnValues "completion" matches "^(I|S|A)[0-9]{2}$"),
+    (ColumnValues "c_r" = "") or (ColumnValues "c_r" matches "^(X|Y|Z)[0-9]{2}$"),
     ColumnValues "response" matches "^(T|[0-9])[0-9]{1}$",    
     (ColumnValues "c_r" = "") or (ReferentialIntegrity "c_r" "reftest.{ref_value}" = 1.0)
     ]
