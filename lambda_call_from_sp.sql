@@ -2,6 +2,7 @@
 -- install aws_lambda extension in PG DB, but before that update rds.allowed_extensions to allow aws_lambda
 -- Change the value of the rds.custom_dns_resolution parameter from its default of 0 to 1. If there is an vpc endpoint for lambda, but private dns is disabled then this will not work.
 -- setup the IAM role and permission for RDS to call lambda
+-- update security groups for RDS to allow outbound traffic to lambda
 DECLARE
 	required_event_list character varying[];
 	event_list_waiting_to_process character varying[];
