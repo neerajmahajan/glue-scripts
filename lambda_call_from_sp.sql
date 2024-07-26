@@ -1,3 +1,7 @@
+-- pre-req https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL-Lambda.html
+-- install aws_lambda extension in PG DB, but before that update rds.allowed_extensions to allow aws_lambda
+-- Change the value of the rds.custom_dns_resolution parameter from its default of 0 to 1
+-- setup the IAM role and permission for RDS to call lambda
 DECLARE
 	required_event_list character varying[];
 	event_list_waiting_to_process character varying[];
